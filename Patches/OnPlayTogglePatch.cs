@@ -10,14 +10,15 @@ public class OnPlayTogglePatch()
     public static bool Prefix(MetronomeHandler __instance, ref bool playing)
     {
         var i = __instance;
-        
-        if (!Plugin.metronomeActive)
-        {
+
+        if (!Plugin.metronomeActive) 
             return false;
-        }
-        else
+        
+        if (!playing)
         {
-            return true;
+            i.queuedDingSongBpmTime = 0;
         }
+
+        return false;
     }
 }
