@@ -7,7 +7,7 @@ namespace BetterMetronome.Patches;
 public class LateUpdate()
 {
     [HarmonyPrefix]
-    public static bool Prefix2(MetronomeHandler __instance)
+    public static bool Prefix(MetronomeHandler __instance)
     {
         var i = __instance;
         

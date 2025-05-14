@@ -7,7 +7,7 @@ namespace BetterMetronome.Patches;
 public class OnPlayTogglePatch()
 {
     [HarmonyPrefix]
-    public static bool Prefix3(MetronomeHandler __instance, ref bool playing)
+    public static bool Prefix(MetronomeHandler __instance, ref bool playing)
     {
         var i = __instance;
         
